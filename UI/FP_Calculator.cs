@@ -32,7 +32,7 @@ namespace Function_Point_Calculator
             {
                 if (diForm.ShowDialog() == DialogResult.OK)
                 {
-                    // txtDI.Text = diForm.FinalDI.ToString();
+                    txtDI.Text = diForm.FinalDI.ToString();
                 }
             }
         }
@@ -105,6 +105,11 @@ namespace Function_Point_Calculator
             // estimatedLOC = CalculatorEngine.CalculateLOC(currentFP, selectedLanguage);
 
             lblLOCResult.Text = $"Est. Lines of Code: {estimatedLOC}";
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
