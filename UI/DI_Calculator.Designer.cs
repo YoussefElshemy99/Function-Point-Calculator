@@ -180,7 +180,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(913, 69);
+            label9.Location = new Point(938, 69);
             label9.Name = "label9";
             label9.Size = new Size(163, 23);
             label9.TabIndex = 9;
@@ -189,7 +189,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(915, 143);
+            label10.Location = new Point(940, 143);
             label10.Name = "label10";
             label10.Size = new Size(95, 23);
             label10.TabIndex = 10;
@@ -198,7 +198,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(913, 215);
+            label11.Location = new Point(938, 215);
             label11.Name = "label11";
             label11.Size = new Size(143, 23);
             label11.TabIndex = 11;
@@ -207,7 +207,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(917, 302);
+            label12.Location = new Point(942, 302);
             label12.Name = "label12";
             label12.Size = new Size(139, 23);
             label12.TabIndex = 12;
@@ -543,11 +543,13 @@
             // 
             lblTotalDI.AutoSize = true;
             lblTotalDI.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblTotalDI.Location = new Point(448, 35);
+            lblTotalDI.Location = new Point(569, 36);
             lblTotalDI.Name = "lblTotalDI";
             lblTotalDI.Size = new Size(124, 28);
             lblTotalDI.TabIndex = 0;
             lblTotalDI.Text = "Total DI = 0";
+            lblTotalDI.TextAlign = ContentAlignment.MiddleCenter;
+            lblTotalDI.Click += lblTotalDI_Click;
             // 
             // btnSave
             // 

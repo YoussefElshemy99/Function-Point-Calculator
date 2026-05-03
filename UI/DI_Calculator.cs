@@ -88,7 +88,7 @@ namespace Function_Point_Calculator.UI
             else if (totalDI < 50) lblTotalDI.ForeColor = Color.Orange;
             else lblTotalDI.ForeColor = Color.Red;
 
-            
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -130,6 +130,11 @@ namespace Function_Point_Calculator.UI
         }
 
         private void trackBar6_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalDI_Click(object sender, EventArgs e)
         {
 
         }
