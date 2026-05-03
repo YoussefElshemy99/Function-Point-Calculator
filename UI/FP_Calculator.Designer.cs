@@ -61,12 +61,12 @@
             txtDI = new TextBox();
             label6 = new Label();
             panel1 = new Panel();
-            button1 = new Button();
+            btnCalcFP = new Button();
             lblLOCResult = new Label();
             lblFPResult = new Label();
             lblTCFResult = new Label();
             lblUFPResult = new Label();
-            btnCalcFP = new Button();
+            btnCalcLOC = new Button();
             btnCalcTCF = new Button();
             btnCalcUFP = new Button();
             groupBox1.SuspendLayout();
@@ -389,6 +389,7 @@
             // 
             cmbLanguage.BackColor = Color.FromArgb(51, 51, 55);
             cmbLanguage.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbLanguage.FlatStyle = FlatStyle.Flat;
             cmbLanguage.ForeColor = Color.White;
             cmbLanguage.FormattingEnabled = true;
             cmbLanguage.Location = new Point(403, 135);
@@ -443,12 +444,12 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnCalcFP);
             panel1.Controls.Add(lblLOCResult);
             panel1.Controls.Add(lblFPResult);
             panel1.Controls.Add(lblTCFResult);
             panel1.Controls.Add(lblUFPResult);
-            panel1.Controls.Add(btnCalcFP);
+            panel1.Controls.Add(btnCalcLOC);
             panel1.Controls.Add(btnCalcTCF);
             panel1.Controls.Add(btnCalcUFP);
             panel1.Location = new Point(1150, 26);
@@ -456,19 +457,20 @@
             panel1.Size = new Size(348, 571);
             panel1.TabIndex = 2;
             // 
-            // button1
+            // btnCalcFP
             // 
-            button1.BackColor = Color.FromArgb(0, 122, 204);
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(62, 306);
-            button1.Name = "button1";
-            button1.Size = new Size(224, 40);
-            button1.TabIndex = 22;
-            button1.Text = "Calculate Final FP";
-            button1.UseVisualStyleBackColor = false;
+            btnCalcFP.BackColor = Color.FromArgb(0, 122, 204);
+            btnCalcFP.Cursor = Cursors.Hand;
+            btnCalcFP.FlatAppearance.BorderSize = 0;
+            btnCalcFP.FlatStyle = FlatStyle.Flat;
+            btnCalcFP.ForeColor = Color.White;
+            btnCalcFP.Location = new Point(62, 306);
+            btnCalcFP.Name = "btnCalcFP";
+            btnCalcFP.Size = new Size(224, 40);
+            btnCalcFP.TabIndex = 22;
+            btnCalcFP.Text = "Calculate Final FP";
+            btnCalcFP.UseVisualStyleBackColor = false;
+            btnCalcFP.Click += button1_Click;
             // 
             // lblLOCResult
             // 
@@ -510,19 +512,20 @@
             lblUFPResult.TabIndex = 18;
             lblUFPResult.Text = "Total UFP: 0";
             // 
-            // btnCalcFP
+            // btnCalcLOC
             // 
-            btnCalcFP.BackColor = Color.FromArgb(0, 122, 204);
-            btnCalcFP.Cursor = Cursors.Hand;
-            btnCalcFP.FlatAppearance.BorderSize = 0;
-            btnCalcFP.FlatStyle = FlatStyle.Flat;
-            btnCalcFP.ForeColor = Color.White;
-            btnCalcFP.Location = new Point(62, 450);
-            btnCalcFP.Name = "btnCalcFP";
-            btnCalcFP.Size = new Size(224, 40);
-            btnCalcFP.TabIndex = 17;
-            btnCalcFP.Text = "Calculate Est. LOC";
-            btnCalcFP.UseVisualStyleBackColor = false;
+            btnCalcLOC.BackColor = Color.FromArgb(0, 122, 204);
+            btnCalcLOC.Cursor = Cursors.Hand;
+            btnCalcLOC.FlatAppearance.BorderSize = 0;
+            btnCalcLOC.FlatStyle = FlatStyle.Flat;
+            btnCalcLOC.ForeColor = Color.White;
+            btnCalcLOC.Location = new Point(62, 450);
+            btnCalcLOC.Name = "btnCalcLOC";
+            btnCalcLOC.Size = new Size(224, 40);
+            btnCalcLOC.TabIndex = 17;
+            btnCalcLOC.Text = "Calculate Est. LOC";
+            btnCalcLOC.UseVisualStyleBackColor = false;
+            btnCalcLOC.Click += btnCalcFP_Click;
             // 
             // btnCalcTCF
             // 
@@ -537,6 +540,7 @@
             btnCalcTCF.TabIndex = 16;
             btnCalcTCF.Text = "Calculate TCF";
             btnCalcTCF.UseVisualStyleBackColor = false;
+            btnCalcTCF.Click += btnCalcTCF_Click;
             // 
             // btnCalcUFP
             // 
@@ -551,6 +555,7 @@
             btnCalcUFP.TabIndex = 15;
             btnCalcUFP.Text = "Calculate UFP";
             btnCalcUFP.UseVisualStyleBackColor = false;
+            btnCalcUFP.Click += btnCalcUFP_Click;
             // 
             // FP_Calculator
             // 
@@ -597,7 +602,7 @@
         private Label label6;
         private ComboBox cmbLanguage;
         private Panel panel1;
-        private Button btnCalcFP;
+        private Button btnCalcLOC;
         private Button btnCalcTCF;
         private Button btnCalcUFP;
         private Label lblLOCResult;
@@ -617,7 +622,7 @@
         private Label label10;
         private Label label9;
         private Label label8;
-        private Button button1;
+        private Button btnCalcFP;
         private Label label11;
         private Label label12;
     }
